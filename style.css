@@ -1,0 +1,320 @@
+/* 
+Color pallete. This section defines variables for the color pallete,
+so that we can refer to particular colors by name instead of hexadecimal values.
+This is applied to the 'root' psuedo-element, which just means that these color
+variables are available to be used anywhere in our html document
+*/
+:root {
+    --white-font: #FFFFFF;
+    --black-font: #000000;
+    --color-1: #F8DF8C ;
+    --color-5: #F8DFDB;
+    --color-6: #FC221C;
+    /* add in other color variables for color pallete */
+}
+
+@font-face {
+    font-family: 'Wagon Bold';
+    src: url(fonts/Wagon-Bold.otf);
+}
+@font-face {
+    font-family: 'Wagon Extra Light';
+    src: url(fonts/Wagon-ExtraLight.otf);
+}
+body{
+    background-color: var(--color-5);
+    max-width: 72em;
+    margin: 0 auto;
+    
+}
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 2em;
+    
+  }
+    #navbar-menu{
+            display: flex;
+            gap: 1em;
+            font-size: 18px;
+          }
+          
+          #navbar-menu li:hover {
+            background-color:var(--color-1);
+            border-radius: 5px;
+            transition: 0.3s ease;
+          }
+          
+          #navbar-menu li, a {
+            padding: 5px 14px;
+             list-style: none;
+             text-decoration: none;
+             font-family: 'Wagon Extra Light';
+             color: var(--black-font);
+          }
+
+   
+
+
+/* Defines the main container size, we are limiting to 72em max and centring in the viewport */
+.main-container {
+    max-width: 72em;
+    margin: 0 auto;
+    font-family: Inter;
+    color: var(--color-6);
+    /* TODO: set the main font color */
+}
+
+/* Here we define the aspects of style of our elements other than their grid layout */
+.banner {
+    padding: 1em;
+    grid-area: ban ;
+    text-align: center;
+    /* TODO: banner styling */
+}
+
+h1 {
+    font-size: 4em;
+    font-family: 'Wagon Bold';
+   
+    color: var(--color-6);
+    /* TODO: banner main title font styling */
+}
+h2, h3{
+    font-family: 'Wagon Bold';
+}
+
+.banner-subtitle {
+    font-size: 2.25em ;
+    padding-left: 0.15em;
+    padding-top: 0.125em;
+   
+    /* TODO: banner subtitle font styling */
+}
+.sub-section{
+    font-size: 1.8em ;
+    padding-left: 0.15em;
+    padding-top: 0.125em;
+    font-family: 'Wagon Bold';
+}
+
+.project {
+    display: flex;
+   flex-direction: row;
+    border-radius: 16px 16px 16px 16px;
+
+    /* TODO: style the card as a column based flexbox with rounded corners */
+}
+
+/* this is the equivalent of setting the image rectangle to "Fill Container" in Figma */ 
+.project-image {
+   width: 100%;
+   max-height: 100%;
+    border-radius: 16px 16px 16px 16px;
+}
+
+.project-text {
+    padding: 2em;
+    font-size: 1.2em;
+    /* TODO: style the blurb with padding */
+}
+
+.small-img img{
+    height: 1.5em;
+    width: 1.5em;
+}
+
+/* this is the equivalent of setting the image rectangle to "Fill Container" in Figma */ 
+.client-icon {
+    width: 100%;
+}
+.project{
+    display: contents;
+}
+
+/* now we create names for the grid areas for specific elements */
+#banner {
+    grid-area: ban;
+    /* TODO: give the grid-area a name */
+}
+#sub-section1{
+    grid-area: subs;
+}
+
+#project-1-image {
+    grid-area: p1i ;
+    /* TODO: give the grid-area a name */
+}
+
+#project-1-text {
+    grid-area: p1t;
+    /* TODO: give the grid-area a name */
+}
+
+#project-2-image {
+    grid-area: p2i;
+    /* TODO: give the grid-area a name */
+}
+#project-2-text {
+    grid-area: p2t;
+    /* TODO: give the grid-area a name */
+}
+#project-3-image {
+    grid-area: p3i;
+    /* TODO: give the grid-area a name */
+}
+#project-3-text {
+    grid-area: p3t;
+    /* TODO: give the grid-area a name */
+}
+#project-4-image {
+    grid-area: p4i;
+    /* TODO: give the grid-area a name */
+}
+#project-4-text {
+    grid-area: p4t;
+    /* TODO: give the grid-area a name */
+}
+
+#ourClientsTitle {
+    grid-area: oct ;
+    /* TODO: give the grid-area a name */
+}
+
+#teamMemberCardBlurb1{
+    grid-area: tmb1;
+}
+#teamMemberCardBlurb2{
+    grid-area: tmb2;
+}
+#teamMemberCardBlurb3{
+    grid-area: tmb3;
+}
+#teamMemberCardBlurb4{
+    grid-area: tmb4;
+}
+#teamMemberCardBlurb5{
+    grid-area: tmb5;
+}
+#teamMemberCardBlurb6{
+    grid-area: tmb6;
+}
+/* Use a flexible layout grid */
+.main-container {
+    display: grid;
+    column-gap: 1em;
+}
+  
+/* 
+Responsive Layout breakpoints. We start 'mobile-first' i.e. we define how the layout should look
+for the smallest screen sizes. In this case we want a single column that spans the main container.
+Because this CSS definition comes first, it will apply by default. Then we override it below with 
+media queries for progressively bigger screen widths
+*/ 
+
+/* Grid-template for mobile phone layout */
+.main-container {
+    grid-template: 
+   " ban ban ban ban" minmax( 6em, auto)
+   " .    .    .   ." minmax(2em, auto)
+   " subs subs .   ." minmax(30em, auto)
+   " .   .   .   .  " minmax(2em, auto)
+   "tm1 tm1 tmb1 tmb1 " minmax(30em, auto)
+   " .   .   .   .  " minmax(2em, auto)
+   "tm2 tm2 tm2 tm2 " minmax(30em, auto)
+   " .   .   .   .  " minmax(2em, auto)
+   "tm3 tm3 tm3 tm3 " minmax(30em, auto)
+   " .   .   .   .  " minmax(4em, auto)
+   "oct oct oct oct " minmax(6em, auto)
+   ".    .   .   .  " minmax(1em, auto)
+   "ci1 ci1 ci2 ci2" minmax(8em, auto) 
+   "ci3 ci3 ci4 ci4" minmax(8em, auto) 
+   "ci5 ci5 ci6 ci6" minmax(8em, auto) 
+   "ci7 ci7 ci8 ci8" minmax(8em, auto) 
+}
+   
+/* Grid-template for tablet layout */
+@media (min-width: 50em) {
+    
+    .main-container {
+        grid-template: 
+        "ban ban ban ban" minmax(8em, auto)
+        ".    .   .   . " minmax(2em, auto)
+        "tm1 tm1 tm2 tm2" minmax(30em, auto)
+        ".    .   .   . " minmax(2em, auto)
+        ".    tm3 tm3 . " minmax(30em, auto)
+        ".    .    .   ." minmax(4em, auto)
+        "oct oct oct oct" minmax(6em, auto)
+        ".    .   .   . " minmax(1em, auto)
+        "ci1 ci1 ci2 ci2" minmax(8em, auto)
+        "ci3 ci3 ci4 ci4" minmax(8em, auto)
+        "ci5 ci5 ci6 ci6" minmax(8em, auto)
+        "ci7 ci7 ci8 ci8" minmax(8em, auto)
+
+            
+    }
+}
+
+ /* Grid-template for desktop layout */
+@media (min-width: 75em) {
+    .main-container {
+        grid-template: 
+        " .   .   .   .   .   .   .   .   .   .   .   . " minmax(6em, auto)
+        "ban ban ban ban ban ban ban ban ban ban ban ban" minmax(8em, auto)
+        " .   .   .   .   .   .   .   .   .   .   .   . " minmax(8em, auto)
+        "subs subs subs subs subs subs subs subs subs subs . ." minmax(2em, auto)
+        " .   .   .   .   .   .   .   .   .   .   .   . " minmax(6em, auto)
+        "p1i p1i p1i p1i p1i p1i p1t p1t p1t p1t p1t p1t" minmax(32em, auto)
+        " .   .   .   .   .   .   .   .   .   .   .   . " minmax(4em, auto)
+        "p2i p2i p2i p2i p2i p2i p2t p2t p2t p2t p2t p2t" minmax(32em, auto)
+        " .   .   .   .   .   .   .   .   .   .   .   . " minmax(4em, auto)
+        "p3i p3i p3i p3i p3i p3i p3t p3t p3t p3t p3t p3t" minmax(32em, auto)
+        " .   .   .   .   .   .   .   .   .   .   .   . " minmax(4em, auto)
+        "p4i p4i p4i p4i p4i p4i p4t p4t p4t p4t p4t p4t" minmax(32em, auto)
+        " .   .   .   .   .   .   .   .   .   .   .   . " minmax(4em, auto)
+       
+       
+    }
+}
+
+/***********/
+/* Footer */
+/**********/
+footer{
+    text-align: left;
+}
+.footer-basic {
+    padding-top: 4em;
+    margin: 0 auto;
+    padding-bottom: 2em;
+    
+}
+#social-platforms{
+    padding: 0;
+}
+
+.footer-basic ul {
+    list-style: none;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.footer-basic ul a{
+    font-family: 'Wagon Bold';
+    color: var(--color-6);
+    font-size: 1.5em;
+    padding-left: 0;
+}
+
+
+.footer-basic ul a:hover {
+    opacity: 0.5;
+}
+
+.footer-basic .copyright {
+    margin-top: 2em;
+    font-size: 1em;
+    color: rgb(142, 142, 142);
+    margin-bottom: 0;
+    font-family: Verdana, sans-serif;
+}
