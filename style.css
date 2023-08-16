@@ -32,7 +32,7 @@ body{
     #navbar-menu{
             display: flex;
             gap: 1em;
-            font-size: 18px;
+            font-size: 2em;
           }
           
           #navbar-menu li:hover {
@@ -42,7 +42,7 @@ body{
           }
           
           #navbar-menu li, a {
-            padding: 5px 14px;
+            padding: 1em 2em;
              list-style: none;
              text-decoration: none;
              font-family: 'Wagon Extra Light';
@@ -54,7 +54,7 @@ body{
 
 /* Defines the main container size, we are limiting to 72em max and centring in the viewport */
 .main-container {
-    max-width: 72em;
+    max-width: 72eem;
     margin: 0 auto;
     font-family: Inter;
     color: var(--color-6);
@@ -92,6 +92,7 @@ h2, h3{
     padding-left: 0.15em;
     padding-top: 0.125em;
     font-family: 'Wagon Bold';
+    text-align: center;
 }
 
 .project {
@@ -172,8 +173,20 @@ h2, h3{
     /* TODO: give the grid-area a name */
 }
 
-#ourClientsTitle {
-    grid-area: oct ;
+#project-5-image {
+    grid-area: p5i;
+    /* TODO: give the grid-area a name */
+}
+#project-5-text {
+    grid-area: p5t;
+    /* TODO: give the grid-area a name */
+}
+#project-6-image {
+    grid-area: p6i;
+    /* TODO: give the grid-area a name */
+}
+#project-6-text {
+    grid-area: p6t;
     /* TODO: give the grid-area a name */
 }
 
@@ -211,22 +224,37 @@ media queries for progressively bigger screen widths
 /* Grid-template for mobile phone layout */
 .main-container {
     grid-template: 
-   " ban ban ban ban" minmax( 6em, auto)
    " .    .    .   ." minmax(2em, auto)
-   " subs subs .   ." minmax(30em, auto)
+   " .  ban ban  ." minmax( 6em, auto)
+   " .    .    .   ." minmax(2em, auto)
+   " .  subs subs  ." minmax(30em, auto)
    " .   .   .   .  " minmax(2em, auto)
-   "tm1 tm1 tmb1 tmb1 " minmax(30em, auto)
+   "p1i p1i p1i p1i " minmax(30em, auto)
    " .   .   .   .  " minmax(2em, auto)
-   "tm2 tm2 tm2 tm2 " minmax(30em, auto)
+   "p1t p1t p1t p1t " minmax(30em, auto)
    " .   .   .   .  " minmax(2em, auto)
-   "tm3 tm3 tm3 tm3 " minmax(30em, auto)
+   "p2i p2i p2i p2i " minmax(30em, auto)
    " .   .   .   .  " minmax(4em, auto)
-   "oct oct oct oct " minmax(6em, auto)
+   "p2t p2t p2t p2t " minmax(6em, auto)
    ".    .   .   .  " minmax(1em, auto)
-   "ci1 ci1 ci2 ci2" minmax(8em, auto) 
-   "ci3 ci3 ci4 ci4" minmax(8em, auto) 
-   "ci5 ci5 ci6 ci6" minmax(8em, auto) 
-   "ci7 ci7 ci8 ci8" minmax(8em, auto) 
+   "p3i p3i p3i p3i" minmax(8em, auto) 
+   ".    .   .   .  " minmax(1em, auto)
+   "p3t p3t p3t p3t" minmax(8em, auto)
+   ".    .   .   .  " minmax(1em, auto)
+   "p4i p4i p4i p4i" minmax(8em, auto) 
+   ".    .   .   .  " minmax(1em, auto)
+   "p4t p4t p4t p4t" minmax(8em, auto) 
+   ".    .   .   .  " minmax(1em, auto)
+   "p5i p5i p5i p5i" minmax(8em, auto) 
+   ".    .   .   .  " minmax(1em, auto)
+   "p5t p5t p5t p5t" minmax(8em, auto)
+   ".    .   .   .  " minmax(1em, auto)
+   "p6i p6i p6i p6i" minmax(8em, auto) 
+   ".    .   .   .  " minmax(1em, auto)
+   "p6t p6t p6t p6t" minmax(8em, auto)
+   ".    .   .   .  " minmax(1em, auto)
+   
+   
 }
    
 /* Grid-template for tablet layout */
@@ -234,20 +262,23 @@ media queries for progressively bigger screen widths
     
     .main-container {
         grid-template: 
+        ".    .   .   . " minmax(2em, auto)
         "ban ban ban ban" minmax(8em, auto)
         ".    .   .   . " minmax(2em, auto)
-        "tm1 tm1 tm2 tm2" minmax(30em, auto)
+        "subs subs subs subs" minmax(8em, auto)
         ".    .   .   . " minmax(2em, auto)
-        ".    tm3 tm3 . " minmax(30em, auto)
+        "p1i p1i p1t p1t" minmax(30em, auto)
+        ".    .   .   . " minmax(2em, auto)
+        "p2i p2i p2t p2t " minmax(30em, auto)
         ".    .    .   ." minmax(4em, auto)
-        "oct oct oct oct" minmax(6em, auto)
+        "p3i p3i p3t p3t" minmax(6em, auto)
         ".    .   .   . " minmax(1em, auto)
-        "ci1 ci1 ci2 ci2" minmax(8em, auto)
-        "ci3 ci3 ci4 ci4" minmax(8em, auto)
-        "ci5 ci5 ci6 ci6" minmax(8em, auto)
-        "ci7 ci7 ci8 ci8" minmax(8em, auto)
-
-            
+        "p4i p4i p4t p4t" minmax(8em, auto)
+        ".    .   .   . " minmax(1em, auto)
+        "p5i p5i p5t p5t" minmax(8em, auto)
+        ".    .   .   . " minmax(1em, auto)
+        "p6i p6i p6t p6t" minmax(8em, auto)
+        ".    .   .   . " minmax(1em, auto)   
     }
 }
 
@@ -257,16 +288,20 @@ media queries for progressively bigger screen widths
         grid-template: 
         " .   .   .   .   .   .   .   .   .   .   .   . " minmax(6em, auto)
         "ban ban ban ban ban ban ban ban ban ban ban ban" minmax(8em, auto)
-        " .   .   .   .   .   .   .   .   .   .   .   . " minmax(8em, auto)
-        "subs subs subs subs subs subs subs subs subs subs . ." minmax(2em, auto)
+        " .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
+        "subs subs subs subs subs subs subs subs subs subs subs subs" minmax(2em, auto)
         " .   .   .   .   .   .   .   .   .   .   .   . " minmax(6em, auto)
-        "p1i p1i p1i p1i p1i p1i p1t p1t p1t p1t p1t p1t" minmax(32em, auto)
+        "p1i p1i p1i p1i p1i p1i p1t p1t p1t p1t p1t p1t" minmax(16em, auto)
         " .   .   .   .   .   .   .   .   .   .   .   . " minmax(4em, auto)
-        "p2i p2i p2i p2i p2i p2i p2t p2t p2t p2t p2t p2t" minmax(32em, auto)
+        "p2i p2i p2i p2i p2i p2i p2t p2t p2t p2t p2t p2t" minmax(16em, auto)
         " .   .   .   .   .   .   .   .   .   .   .   . " minmax(4em, auto)
-        "p3i p3i p3i p3i p3i p3i p3t p3t p3t p3t p3t p3t" minmax(32em, auto)
+        "p3i p3i p3i p3i p3i p3i p3t p3t p3t p3t p3t p3t" minmax(16em, auto)
         " .   .   .   .   .   .   .   .   .   .   .   . " minmax(4em, auto)
-        "p4i p4i p4i p4i p4i p4i p4t p4t p4t p4t p4t p4t" minmax(32em, auto)
+        "p4i p4i p4i p4i p4i p4i p4t p4t p4t p4t p4t p4t" minmax(16em, auto)
+        " .   .   .   .   .   .   .   .   .   .   .   . " minmax(4em, auto)
+        "p5i p5i p5i p5i p5i p5i p5t p5t p5t p5t p5t p5t" minmax(16em, auto)
+        " .   .   .   .   .   .   .   .   .   .   .   . " minmax(4em, auto)
+        "p6i p6i p6i p6i p6i p6i p6t p6t p6t p6t p6t p6t" minmax(16em, auto)
         " .   .   .   .   .   .   .   .   .   .   .   . " minmax(4em, auto)
        
        
