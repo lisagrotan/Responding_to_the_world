@@ -54,7 +54,7 @@ body{
 
 /* Defines the main container size, we are limiting to 72em max and centring in the viewport */
 .main-container {
-    max-width: 72eem;
+    max-width: 72em;
     margin: 0 auto;
     font-family: Inter;
     color: var(--color-6);
@@ -78,6 +78,9 @@ h1 {
 }
 h2, h3{
     font-family: 'Wagon Bold';
+}
+h3{
+    font-size: 1.2em;
 }
 
 .banner-subtitle {
@@ -227,31 +230,31 @@ media queries for progressively bigger screen widths
    " .    .    .   ." minmax(2em, auto)
    " .  ban ban  ." minmax( 6em, auto)
    " .    .    .   ." minmax(2em, auto)
-   " .  subs subs  ." minmax(30em, auto)
-   " .   .   .   .  " minmax(2em, auto)
-   "p1i p1i p1i p1i " minmax(30em, auto)
-   " .   .   .   .  " minmax(2em, auto)
-   "p1t p1t p1t p1t " minmax(30em, auto)
-   " .   .   .   .  " minmax(2em, auto)
-   "p2i p2i p2i p2i " minmax(30em, auto)
+   " .  subs subs  ." minmax(6em, auto)
    " .   .   .   .  " minmax(4em, auto)
-   "p2t p2t p2t p2t " minmax(6em, auto)
+   "p1t p1t p1t p1t " minmax(30em, auto)
+   " .   .   .   .  " minmax(1em, auto)
+   "p1i p1i p1i p1i " minmax(8em, auto)
+   " .   .   .   .  " minmax(4em, auto)
+   "p2t p2t p2t p2t " minmax(8em, auto)
+   " .   .   .   .  " minmax(1em, auto)
+   "p2i p2i p2i p2i " minmax(6em, auto)
+   ".    .   .   .  " minmax(4em, auto)
+   "p3t p3t p3t p3t" minmax(8em, auto) 
    ".    .   .   .  " minmax(1em, auto)
-   "p3i p3i p3i p3i" minmax(8em, auto) 
-   ".    .   .   .  " minmax(1em, auto)
-   "p3t p3t p3t p3t" minmax(8em, auto)
-   ".    .   .   .  " minmax(1em, auto)
-   "p4i p4i p4i p4i" minmax(8em, auto) 
-   ".    .   .   .  " minmax(1em, auto)
+   "p3i p3i p3i p3i" minmax(8em, auto)
+   ".    .   .   .  " minmax(4em, auto)
    "p4t p4t p4t p4t" minmax(8em, auto) 
    ".    .   .   .  " minmax(1em, auto)
-   "p5i p5i p5i p5i" minmax(8em, auto) 
+   "p4i p4i p4i p4i" minmax(8em, auto) 
+   ".    .   .   .  " minmax(4em, auto)
+   "p5t p5t p5t p5t" minmax(8em, auto) 
    ".    .   .   .  " minmax(1em, auto)
-   "p5t p5t p5t p5t" minmax(8em, auto)
+   "p5i p5i p5i p5i" minmax(8em, auto)
+   ".    .   .   .  " minmax(4em, auto)
+   "p6t p6t p6t p6t" minmax(8em, auto) 
    ".    .   .   .  " minmax(1em, auto)
-   "p6i p6i p6i p6i" minmax(8em, auto) 
-   ".    .   .   .  " minmax(1em, auto)
-   "p6t p6t p6t p6t" minmax(8em, auto)
+   "p6i p6i p6i p6i" minmax(8em, auto)
    ".    .   .   .  " minmax(1em, auto)
    
    
@@ -267,17 +270,17 @@ media queries for progressively bigger screen widths
         ".    .   .   . " minmax(2em, auto)
         "subs subs subs subs" minmax(8em, auto)
         ".    .   .   . " minmax(2em, auto)
-        "p1i p1i p1t p1t" minmax(30em, auto)
+        "p1i p1i p1t p1t" minmax(16em, auto)
         ".    .   .   . " minmax(2em, auto)
-        "p2i p2i p2t p2t " minmax(30em, auto)
+        "p2i p2i p2t p2t " minmax(16em, auto)
         ".    .    .   ." minmax(4em, auto)
-        "p3i p3i p3t p3t" minmax(6em, auto)
+        "p3i p3i p3t p3t" minmax(16em, auto)
         ".    .   .   . " minmax(1em, auto)
-        "p4i p4i p4t p4t" minmax(8em, auto)
+        "p4i p4i p4t p4t" minmax(16em, auto)
         ".    .   .   . " minmax(1em, auto)
-        "p5i p5i p5t p5t" minmax(8em, auto)
+        "p5i p5i p5t p5t" minmax(16em, auto)
         ".    .   .   . " minmax(1em, auto)
-        "p6i p6i p6t p6t" minmax(8em, auto)
+        "p6i p6i p6t p6t" minmax(16em, auto)
         ".    .   .   . " minmax(1em, auto)   
     }
 }
@@ -286,11 +289,11 @@ media queries for progressively bigger screen widths
 @media (min-width: 75em) {
     .main-container {
         grid-template: 
-        " .   .   .   .   .   .   .   .   .   .   .   . " minmax(6em, auto)
+        " .   .   .   .   .   .   .   .   .   .   .   . " minmax(4em, auto)
         "ban ban ban ban ban ban ban ban ban ban ban ban" minmax(8em, auto)
         " .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
         "subs subs subs subs subs subs subs subs subs subs subs subs" minmax(2em, auto)
-        " .   .   .   .   .   .   .   .   .   .   .   . " minmax(6em, auto)
+        " .   .   .   .   .   .   .   .   .   .   .   . " minmax(4em, auto)
         "p1i p1i p1i p1i p1i p1i p1t p1t p1t p1t p1t p1t" minmax(16em, auto)
         " .   .   .   .   .   .   .   .   .   .   .   . " minmax(4em, auto)
         "p2i p2i p2i p2i p2i p2i p2t p2t p2t p2t p2t p2t" minmax(16em, auto)
@@ -316,8 +319,9 @@ footer{
 }
 .footer-basic {
     padding-top: 4em;
-    margin: 0 auto;
     padding-bottom: 2em;
+    margin: 0 auto;
+    
     
 }
 #social-platforms{
