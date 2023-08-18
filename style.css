@@ -228,12 +228,9 @@ media queries for progressively bigger screen widths
 */ 
 
 /* Grid-template for mobile phone layout */
-body{
+.main-container {
     margin-left: 2em;
     margin-right: 2em;
-}
-.main-container {
-  
     grid-template: 
    " .    .    .   ." minmax(2em, auto)
    " .  ban ban  ." minmax( 6em, auto)
@@ -272,10 +269,7 @@ body{
    
 /* Grid-template for tablet layout */
 @media (min-width: 50em) {
-    body{
-        margin-left: 2em;
-        margin-right: 2em;
-    }
+    
     .main-container {
         margin-left: 2em;
         margin-right: 2em;
@@ -339,7 +333,7 @@ footer{
 .footer-basic {
     padding-top: 4em;
     padding-bottom: 2em;
-    margin: 2em;
+    margin: 0 auto;
     
     
 }
