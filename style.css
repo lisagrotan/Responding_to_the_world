@@ -192,6 +192,9 @@ h3{
     grid-area: p6t;
     /* TODO: give the grid-area a name */
 }
+#footer{
+    grid-area: fot;
+}
 
 #teamMemberCardBlurb1{
     grid-area: tmb1;
@@ -225,7 +228,12 @@ media queries for progressively bigger screen widths
 */ 
 
 /* Grid-template for mobile phone layout */
+body{
+    margin-left: 2em;
+    margin-right: 2em;
+}
 .main-container {
+  
     grid-template: 
    " .    .    .   ." minmax(2em, auto)
    " .  ban ban  ." minmax( 6em, auto)
@@ -256,14 +264,21 @@ media queries for progressively bigger screen widths
    ".    .   .   .  " minmax(1em, auto)
    "p6i p6i p6i p6i" minmax(8em, auto)
    ".    .   .   .  " minmax(1em, auto)
+   "fot fot fot fot" minmax(8em, auto)
+   ".    .   .   .  " minmax(1em, auto)
    
    
 }
    
 /* Grid-template for tablet layout */
 @media (min-width: 50em) {
-    
+    body{
+        margin-left: 2em;
+        margin-right: 2em;
+    }
     .main-container {
+        margin-left: 2em;
+        margin-right: 2em;
         grid-template: 
         ".    .   .   . " minmax(2em, auto)
         "ban ban ban ban" minmax(8em, auto)
@@ -273,15 +288,17 @@ media queries for progressively bigger screen widths
         "p1i p1i p1t p1t" minmax(16em, auto)
         ".    .   .   . " minmax(2em, auto)
         "p2i p2i p2t p2t " minmax(16em, auto)
-        ".    .    .   ." minmax(4em, auto)
+        ".    .    .   ." minmax(2em, auto)
         "p3i p3i p3t p3t" minmax(16em, auto)
-        ".    .   .   . " minmax(1em, auto)
+        ".    .   .   . " minmax(2em, auto)
         "p4i p4i p4t p4t" minmax(16em, auto)
-        ".    .   .   . " minmax(1em, auto)
+        ".    .   .   . " minmax(2em, auto)
         "p5i p5i p5t p5t" minmax(16em, auto)
-        ".    .   .   . " minmax(1em, auto)
+        ".    .   .   . " minmax(2em, auto)
         "p6i p6i p6t p6t" minmax(16em, auto)
-        ".    .   .   . " minmax(1em, auto)   
+        ".    .   .   . " minmax(2em, auto)   
+        "fot fot fot fot" minmax(8em, auto)
+        ".    .   .   . " minmax(2em, auto)
     }
 }
 
@@ -306,6 +323,8 @@ media queries for progressively bigger screen widths
         " .   .   .   .   .   .   .   .   .   .   .   . " minmax(4em, auto)
         "p6i p6i p6i p6i p6i p6i p6t p6t p6t p6t p6t p6t" minmax(16em, auto)
         " .   .   .   .   .   .   .   .   .   .   .   . " minmax(4em, auto)
+        "fot fot fot fot fot fot fot fot fot fot fot fot" minmax(16em, auto)
+        " .   .   .   .   .   .   .   .   .   .   .   . " minmax(4em, auto)
        
        
     }
@@ -320,7 +339,7 @@ footer{
 .footer-basic {
     padding-top: 4em;
     padding-bottom: 2em;
-    margin: 0 auto;
+    margin: 2em;
     
     
 }
